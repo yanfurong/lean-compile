@@ -12,9 +12,9 @@ on:
   release:
     types: [published]
 
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
 
   #schedule:
   #  - cron: 0 01 * * *
@@ -65,6 +65,7 @@ jobs:
         ./scripts/feeds install -a
 
 - name: Costom configure file
+  working-directory: ./openwrt
         run: |
           rm -f ./.config*
           touch ./.config
