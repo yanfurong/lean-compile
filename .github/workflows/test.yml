@@ -63,13 +63,11 @@ jobs:
         rm -rf feeds/lienol/others/luci-app-verysync && rm -rf feeds/lienol/package/shadowsocksr-libev && rm -rf feeds/lienol/package/trojan && rm -rf feeds/lienol/package/v2ray && rm -rf feeds/lienol/package/pdnsd-alt && rm -rf feeds/lienol/package/openssl1.1 && rm -rf feeds/lienol/package/ipt2socks && rm -rf feeds/lienol/package/verysync && rm -rf package/lean/kcptun && rm -rf package/lean/luci-app-kodexplorer && rm -rf package/lean/luci-app-pppoe-relay && rm -rf package/lean/luci-app-pptp-server && rm -rf package/lean/luci-app-v2ray-server
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-
-- name: Costom configure file
-  working-directory: ./openwrt
+    - name: Costom configure file
+      working-directory: ./openwrt
       run: |
         rm -f ./.config*
         touch ./.config
-         
         # 编译x64固件:
         cat >> .config <<EOF
         CONFIG_TARGET_x86=y
@@ -78,7 +76,7 @@ jobs:
         EOF
         sed -i 's/^[ \t]*//g' ./.config
         make defconfig
-     
+         
     - name: Download package
       working-directory: ./openwrt
       run: |
