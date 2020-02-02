@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Test-x64
+name: Lean_lienol-x64
 
 on: 
   release:
@@ -244,5 +244,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@master
       with:
-        name: x64
+        name: lean_lienol_x64
         path: ./artifact/
