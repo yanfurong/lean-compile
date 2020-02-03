@@ -70,9 +70,9 @@ jobs:
         touch ./.config
         # 编译x64固件:
         cat >> .config <<EOF
-        CONFIG_TARGET_mvebu=y
-        CONFIG_TARGET_mvebu_cortexa9=y
-        CONFIG_TARGET_mvebu_cortexa9_DEVICE_linksys_wrt1900acv2=y
+        CONFIG_TARGET_bcm53xx=y
+        CONFIG_TARGET_bcm53xx_DEVICE_phicomm-k3=y
+        CONFIG_TARGET_BOARD="bcm53xx"
         EOF
         # 固件压缩:
         cat >> .config <<EOF
@@ -113,7 +113,7 @@ jobs:
         CONFIG_RPCBIND_LIBWRAP=y
         CONFIG_RPCBIND_RMTCALLS=y          
         EOF
-        # USB3.0支持:
+        # USB3.0和网卡支持:
         cat >> .config <<EOF
         CONFIG_PACKAGE_kmod-usb-ohci=y
         CONFIG_PACKAGE_kmod-usb-ohci-pci=y
@@ -214,7 +214,7 @@ jobs:
         CONFIG_PACKAGE_autosamba=y
         CONFIG_PACKAGE_fdisk=y
         CONFIG_PACKAGE_e2fsprogs=y
-        #CONFIG_PACKAGE_k3wifi=y
+        CONFIG_PACKAGE_k3wifi=y
         EOF
         # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
         cat >> .config <<EOF
@@ -243,10 +243,9 @@ jobs:
       run: |
           rm -rf ./artifact/
           mkdir -p ./artifact/
-          #find openwrt/bin/targets/ -name "*sysupgrade*bin*" | xargs -i mv -f {} ./artifact/
-          find openwrt/bin/targets/ -name "*squashfs-factory*img*" | xargs -i mv -f {} ./artifact/
+          find openwrt/bin/targets/ -name "*phicomm-k3-squashfs*trx*" | xargs -i mv -f {} ./artifact/
+          find openwrt/bin/targets/ -name "*combined*img*" | xargs -i mv -f {} ./artifact/
           #find openwrt/bin/targets/ -name "*combined*vmdk*" | xargs -i mv -f {} ./artifact/
-
 
     - name: Upload artifact
       uses: actions/upload-artifact@master
