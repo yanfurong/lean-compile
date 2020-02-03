@@ -188,7 +188,7 @@ jobs:
         #CONFIG_PACKAGE_luci-app-zerotier=y
         # CONFIG_PACKAGE_luci-app-unblockmusic is not set
         # CONFIG_PACKAGE_luci-app-qbittorrent is not set
-        CONFIG_PACKAGE_luci-app-advanced-reboot=y
+        #CONFIG_PACKAGE_luci-app-advanced-reboot=y
         
         EOF
         # LuCI主题:
