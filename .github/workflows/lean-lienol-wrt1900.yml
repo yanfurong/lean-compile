@@ -12,9 +12,9 @@ on:
   release:
     types: [published]
 
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
 
   #schedule:
   #  - cron: 0 01 * * *
@@ -244,8 +244,9 @@ jobs:
           rm -rf ./artifact/
           mkdir -p ./artifact/
           #find openwrt/bin/targets/ -name "*sysupgrade*bin*" | xargs -i mv -f {} ./artifact/
-          find openwrt/bin/targets/ -name "*combined*img*" | xargs -i mv -f {} ./artifact/
+          find openwrt/bin/targets/ -name "*squashfs-factory*img*" | xargs -i mv -f {} ./artifact/
           #find openwrt/bin/targets/ -name "*combined*vmdk*" | xargs -i mv -f {} ./artifact/
+
 
     - name: Upload artifact
       uses: actions/upload-artifact@master
