@@ -131,7 +131,6 @@ jobs:
         # CONFIG_PACKAGE_luci-app-accesscontrol is not set
         # CONFIG_PACKAGE_luci-app-adblock is not set
         # CONFIG_PACKAGE_luci-app-adbyby-plus is not set
-        # CONFIG_PACKAGE_luci-app-advanced-reboot is not set
         CONFIG_PACKAGE_luci-app-aria2=y
         CONFIG_PACKAGE_luci-app-arpbind=y
         CONFIG_PACKAGE_luci-app-autoreboot=y
