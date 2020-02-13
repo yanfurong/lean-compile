@@ -145,6 +145,7 @@ jobs:
         CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
         # CONFIG_PACKAGE_luci-app-kcptun is not set
         CONFIG_PACKAGE_luci-app-minidlna=y
+        CONFIG_PACKAGE_luci-app-nfs=y
         CONFIG_PACKAGE_luci-app-nlbwmon=y
         CONFIG_PACKAGE_luci-app-openvpn-server=y
         CONFIG_PACKAGE_luci-app-passwall=y
