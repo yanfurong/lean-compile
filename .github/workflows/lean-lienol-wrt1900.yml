@@ -137,7 +137,7 @@ jobs:
         #CONFIG_PACKAGE_luci-app-brook-server=y
         #CONFIG_PACKAGE_luci-app-cifsd=y
         CONFIG_PACKAGE_luci-app-ddns=y
-        #CONFIG_PACKAGE_luci-app-docker=y
+        # CONFIG_PACKAGE_luci-app-dockerman is not set
         CONFIG_PACKAGE_luci-app-filetransfer=y
         CONFIG_PACKAGE_luci-app-firewall=y
         CONFIG_PACKAGE_luci-app-flowoffload=y
@@ -154,8 +154,8 @@ jobs:
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_socks=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_socks=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=y
-        #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan=y
-        #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y
+        # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan is not set
+        # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook is not set
         # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun is not set
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_haproxy=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=y
@@ -178,9 +178,11 @@ jobs:
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
         CONFIG_PACKAGE_luci-app-ssr-python-pro-server=y
         # CONFIG_PACKAGE_luci-app-ssrserver-python is not set
-        #CONFIG_PACKAGE_luci-app-syncthing=y
-        #CONFIG_PACKAGE_luci-app-transmission=y
-        CONFIG_PACKAGE_luci-app-trojan-server=y
+        # CONFIG_PACKAGE_luci-app-syncdial is not set
+        # CONFIG_PACKAGE_luci-app-syncthing is not set
+        # CONFIG_PACKAGE_luci-app-tinyproxy is not set
+        # CONFIG_PACKAGE_luci-app-transmission is not set
+        # CONFIG_PACKAGE_luci-app-trojan-server is not set
         CONFIG_PACKAGE_luci-app-usb-printer=y
         #CONFIG_PACKAGE_luci-app-v2ray-server=y
         #CONFIG_PACKAGE_luci-app-verysync=y
