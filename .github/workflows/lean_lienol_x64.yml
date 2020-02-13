@@ -220,7 +220,7 @@ jobs:
         CONFIG_PACKAGE_autosamba=y
         CONFIG_PACKAGE_fdisk=y
         CONFIG_PACKAGE_e2fsprogs=y
-        #CONFIG_PACKAGE_k3wifi=y
+        # CONFIG_PACKAGE_k3wifi is not set
         CONFIG_PACKAGE_shadowsocksr-libev-server=y
         EOF
         # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
