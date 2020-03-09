@@ -111,7 +111,8 @@ jobs:
         CONFIG_PACKAGE_rpcbind=y
         CONFIG_PACKAGE_yaaw=y
         CONFIG_RPCBIND_LIBWRAP=y
-        CONFIG_RPCBIND_RMTCALLS=y          
+        CONFIG_RPCBIND_RMTCALLS=y
+        CONFIG_PACKAGE_openssh-sftp-server=y           
         EOF
         # USB3.0支持:
         cat >> .config <<EOF
