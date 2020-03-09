@@ -111,7 +111,8 @@ jobs:
         CONFIG_PACKAGE_rpcbind=y
         CONFIG_PACKAGE_yaaw=y
         CONFIG_RPCBIND_LIBWRAP=y
-        CONFIG_RPCBIND_RMTCALLS=y          
+        CONFIG_RPCBIND_RMTCALLS=y
+        CONFIG_PACKAGE_openssh-sftp-server=y          
         EOF
         # USB3.0支持:
         cat >> .config <<EOF
@@ -174,9 +175,10 @@ jobs:
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan is not set
+        CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun is not set
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server is not set
-        CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
+        CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_DNS2SOCKS=y
         CONFIG_PACKAGE_luci-app-ssr-python-pro-server=y
         # CONFIG_PACKAGE_luci-app-ssrserver-python is not set
         # CONFIG_PACKAGE_luci-app-syncdial is not set
@@ -195,6 +197,8 @@ jobs:
         # CONFIG_PACKAGE_luci-app-unblockmusic is not set
         # CONFIG_PACKAGE_luci-app-qbittorrent is not set
         # CONFIG_PACKAGE_luci-app-advanced-reboot is not set
+        # CONFIG_PACKAGE_luci-app-unblockneteasemusic-mini is not set
+        CONFIG_PACKAGE_luci-app-cifsd=y
         
         EOF
         # LuCI主题:
