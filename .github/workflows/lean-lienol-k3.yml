@@ -205,7 +205,7 @@ jobs:
         #CONFIG_PACKAGE_luci-app-advanced-reboot=y
         # CONFIG_PACKAGE_luci-app-unblockneteasemusic-mini is not set
         CONFIG_PACKAGE_luci-app-cifsd=y
-        CONFIG_PACKAGE_luci-app-openclash=y
+        # CONFIG_PACKAGE_luci-app-openclash is not set
         CONFIG_PACKAGE_luci-app-airplay2=y
         CONFIG_PACKAGE_luci-app-nfs=y
         CONFIG_PACKAGE_luci-app-music-remote-center=y
