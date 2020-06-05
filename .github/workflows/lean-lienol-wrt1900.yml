@@ -111,16 +111,16 @@ jobs:
         CONFIG_PACKAGE_rpcbind=y
         CONFIG_PACKAGE_yaaw=y
         CONFIG_RPCBIND_LIBWRAP=y
-        CONFIG_RPCBIND_RMTCALLS=y
-        CONFIG_PACKAGE_openssh-sftp-server=y           
+        #CONFIG_RPCBIND_RMTCALLS=y 
+        CONFIG_PACKAGE_openssh-sftp-server=y         
         EOF
         # USB3.0支持:
         cat >> .config <<EOF
-        CONFIG_PACKAGE_kmod-usb-ohci=y
-        CONFIG_PACKAGE_kmod-usb-ohci-pci=y
-        CONFIG_PACKAGE_kmod-usb2=y
-        CONFIG_PACKAGE_kmod-usb2-pci=y
-        CONFIG_PACKAGE_kmod-usb3=y
+        #CONFIG_PACKAGE_kmod-usb-ohci=y
+        #CONFIG_PACKAGE_kmod-usb-ohci-pci=y
+        #CONFIG_PACKAGE_kmod-usb2=y
+        #CONFIG_PACKAGE_kmod-usb2-pci=y
+        #CONFIG_PACKAGE_kmod-usb3=y
         #CONFIG_PACKAGE_kmod-b44=y
         #CONFIG_PACKAGE_kmod-phy-broadcom=y
         #CONFIG_PACKAGE_kmod-phylib-broadcom=y
@@ -133,20 +133,19 @@ jobs:
         # CONFIG_PACKAGE_luci-app-adblock is not set
         # CONFIG_PACKAGE_luci-app-adbyby-plus is not set
         CONFIG_PACKAGE_luci-app-aria2=y
-        CONFIG_PACKAGE_luci-app-arpbind=y
+        #CONFIG_PACKAGE_luci-app-arpbind=y
         CONFIG_PACKAGE_luci-app-autoreboot=y
         #CONFIG_PACKAGE_luci-app-brook-server=y
-        #CONFIG_PACKAGE_luci-app-cifsd=y
+        # CONFIG_PACKAGE_luci-app-cifsd is not set
         CONFIG_PACKAGE_luci-app-ddns=y
-        # CONFIG_PACKAGE_luci-app-dockerman is not set
-        CONFIG_PACKAGE_luci-app-filetransfer=y
-        CONFIG_PACKAGE_luci-app-firewall=y
-        CONFIG_PACKAGE_luci-app-flowoffload=y
-        CONFIG_PACKAGE_luci-app-hd-idle=y
+        #CONFIG_PACKAGE_luci-app-docker=y
+        #CONFIG_PACKAGE_luci-app-filetransfer=y
+        #CONFIG_PACKAGE_luci-app-firewall=y
+        #CONFIG_PACKAGE_luci-app-flowoffload=y
+        #CONFIG_PACKAGE_luci-app-hd-idle=y
         CONFIG_PACKAGE_luci-app-ipsec-vpnd=y
         # CONFIG_PACKAGE_luci-app-kcptun is not set
         CONFIG_PACKAGE_luci-app-minidlna=y
-        CONFIG_PACKAGE_luci-app-nfs=y
         CONFIG_PACKAGE_luci-app-nlbwmon=y
         CONFIG_PACKAGE_luci-app-openvpn-server=y
         CONFIG_PACKAGE_luci-app-passwall=y
@@ -155,74 +154,80 @@ jobs:
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_socks=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_socks=y
-        CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=y
-        # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan is not set
-        # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook is not set
+        #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=y
+        #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan=y
+        #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y
         # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun is not set
-        CONFIG_PACKAGE_luci-app-passwall_INCLUDE_haproxy=y
+        #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_haproxy=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ChinaDNS_NG=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_pdnsd=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_dns2socks=y
-        CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin=y
+        #CONFIG_PACKAGE_luci-app-passwall_INCLUDE_v2ray-plugin=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_simple-obfs=y
         CONFIG_PACKAGE_luci-app-ramfree=y
         CONFIG_PACKAGE_luci-app-samba=y 
-        CONFIG_PACKAGE_luci-app-smartdns=y
-        CONFIG_PACKAGE_luci-app-softethervpn=y
+        #CONFIG_PACKAGE_luci-app-smartdns=y
+        #CONFIG_PACKAGE_luci-app-softethervpn=y
         CONFIG_PACKAGE_luci-app-ssr-plus=y
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks=y
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_obfs=y
-        CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
-        CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
+        #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_plugin=y
+        #CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan is not set
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2=y
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun is not set
         # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server is not set
         CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_DNS2SOCKS=y
-        CONFIG_PACKAGE_luci-app-ssr-python-pro-server=y
+        CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
+        #CONFIG_PACKAGE_luci-app-ssr-python-pro-server=y
         # CONFIG_PACKAGE_luci-app-ssrserver-python is not set
-        # CONFIG_PACKAGE_luci-app-syncdial is not set
-        # CONFIG_PACKAGE_luci-app-syncthing is not set
-        # CONFIG_PACKAGE_luci-app-tinyproxy is not set
-        # CONFIG_PACKAGE_luci-app-transmission is not set
+        #CONFIG_PACKAGE_luci-app-syncthing=y
+        #CONFIG_PACKAGE_luci-app-transmission=y
         # CONFIG_PACKAGE_luci-app-trojan-server is not set
-        CONFIG_PACKAGE_luci-app-usb-printer=y
+        # CONFIG_PACKAGE_luci-app-usb-printer is not set
         #CONFIG_PACKAGE_luci-app-v2ray-server=y
         #CONFIG_PACKAGE_luci-app-verysync=y
-        CONFIG_PACKAGE_luci-app-vlmcsd=y
+        # CONFIG_PACKAGE_luci-app-vlmcsd is not set
         # CONFIG_PACKAGE_luci-app-wireguard is not set
-        CONFIG_PACKAGE_luci-app-wol=y
+        #CONFIG_PACKAGE_luci-app-wol=y
         # CONFIG_PACKAGE_luci-app-xlnetacc is not set
-        #CONFIG_PACKAGE_luci-app-zerotier=y
+        # CONFIG_PACKAGE_luci-app-zerotier is not set
         # CONFIG_PACKAGE_luci-app-unblockmusic is not set
+        # CONFIG_PACKAGE_luci-app-unblockmusic is not set
+        # CONFIG_UnblockNeteaseMusic_Go is not set
+        # CONFIG_UnblockNeteaseMusic_NodeJS is not set
         # CONFIG_PACKAGE_luci-app-qbittorrent is not set
         CONFIG_PACKAGE_luci-app-advanced-reboot=y
-        
+        # CONFIG_PACKAGE_luci-app-openclash is not set
+        #CONFIG_PACKAGE_luci-app-airplay2=y
+        #CONFIG_PACKAGE_luci-app-nfs=y
+        #CONFIG_PACKAGE_luci-app-music-remote-center=y
+        # CONFIG_PACKAGE_luci-app-guest-wifi is not set
         EOF
         # LuCI主题:
         cat >> .config <<EOF
-        CONFIG_PACKAGE_luci-theme-bootstrap=y
+        #CONFIG_PACKAGE_luci-theme-bootstrap=y
         #CONFIG_PACKAGE_luci-theme-argon=y
         #CONFIG_PACKAGE_luci-theme-netgear=y
         EOF
         # 常用软件包和指令:
         cat >> .config <<EOF
         CONFIG_PACKAGE_curl=y
-        CONFIG_PACKAGE_htop=y
+        #CONFIG_PACKAGE_htop=y
         #CONFIG_PACKAGE_nano=y
         #CONFIG_PACKAGE_screen=y
         #CONFIG_PACKAGE_tree=y
         #CONFIG_PACKAGE_vim-fuller=y
         CONFIG_PACKAGE_wget=y
-        CONFIG_PACKAGE_blkid=y
+        #CONFIG_PACKAGE_blkid=y
         CONFIG_PACKAGE_hd-idle=y
-        CONFIG_PACKAGE_iperf3=y
-        CONFIG_PACKAGE_mount-utils=y
+        #CONFIG_PACKAGE_iperf3=y
+        #CONFIG_PACKAGE_mount-utils=y
         CONFIG_PACKAGE_automount=y
         CONFIG_PACKAGE_autosamba=y
         CONFIG_PACKAGE_fdisk=y
         CONFIG_PACKAGE_e2fsprogs=y
-        # CONFIG_PACKAGE_k3wifi is not set
+        #CONFIG_PACKAGE_k3wifi=y
         EOF
         # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
         cat >> .config <<EOF
