@@ -56,7 +56,7 @@ jobs:
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
-        sed -i 's/192.168.1.1/192.168.8.222/g' package/base-files/files/bin/config_generate
+        sed -i 's/192.168.1.1/192.168.6.222/g' package/base-files/files/bin/config_generate
         sed -i 's/OpenWrt/HP GEN8/g' package/base-files/files/bin/config_generate
         sed -i '4a src-git lienol https://github.com/yasum2006/passwall' feeds.conf.default
         sed -i '5a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
