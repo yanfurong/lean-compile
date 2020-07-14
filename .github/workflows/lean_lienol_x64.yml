@@ -163,6 +163,7 @@ jobs:
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_ShadowsocksR_socks=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_V2ray=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan=y
+        CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Trojan_GO=y
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Brook=y
         # CONFIG_PACKAGE_luci-app-passwall_INCLUDE_kcptun is not set
         CONFIG_PACKAGE_luci-app-passwall_INCLUDE_haproxy=y
@@ -204,9 +205,9 @@ jobs:
         # CONFIG_UnblockNeteaseMusic_Go is not set
         # CONFIG_UnblockNeteaseMusic_NodeJS is not set
         # CONFIG_PACKAGE_luci-app-qbittorrent is not set
-        # CONFIG_PACKAGE_luci-app-advanced-reboot=y
-        # CONFIG_PACKAGE_luci-app-wireguard is not set
-        # CONFIG_PACKAGE_luci-app-openclash is not set
+        #CONFIG_PACKAGE_luci-app-advanced-reboot=y
+        #CONFIG_PACKAGE_luci-app-wireguard is not set
+        CONFIG_PACKAGE_luci-app-openclash=y
         CONFIG_PACKAGE_luci-app-airplay2=y
         # CONFIG_PACKAGE_luci-app-nfs is not set
         # CONFIG_PACKAGE_luci-app-music-remote-center is not set
@@ -268,7 +269,7 @@ jobs:
           rm -rf ./artifact/
           mkdir -p ./artifact/
           #find openwrt/bin/targets/ -name "*sysupgrade*bin*" | xargs -i mv -f {} ./artifact/
-          find openwrt/bin/targets/ -name "*combined*img*" | xargs -i mv -f {} ./artifact/
+          find openwrt/bin/targets/ -name "*combined.img*" | xargs -i mv -f {} ./artifact/
           #find openwrt/bin/targets/ -name "*combined*vmdk*" | xargs -i mv -f {} ./artifact/
 
     - name: Upload artifact
